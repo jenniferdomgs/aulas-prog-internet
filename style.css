@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    justify-content: center;
+    margin: 0%;
+}
+
+#b {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+button {
+    cursor: pointer;
+}
