@@ -12,7 +12,24 @@ let bol = true /// Boolean
 let lista = ["banana", "maçã", "uva"]; // Lista
 let objeto = {nome: "Maria", idade: 18}; // Objeto
 
+
+// Importante!!
+
+/* 
+Igualdade solta 
+ 5 == '5' (True)
+
+Igualdade Estrita
+
+ 5 === '5' (False)
+
+ 0 == false (True)
+ 0 === false (false)
+*/ 
+
+
 // Operadores Aritiméticos
+
 let a = 10;
 
 let b = 5;
@@ -24,6 +41,7 @@ let divisao = a / b;
 let resto = a % b; 
 
 // Operadores de Atribuição
+
 let x = 10;
 
 x += 5; // x = x + 5  (15)
@@ -40,23 +58,13 @@ console.log(idade > 18);  // idade é maior que 18? (TRUE)
 console.log(idade === 20); // idade é igual a 20?  (TRUE)
 console.log(idade !== 18); // idade é diferente de 18? (TRUE)
 
-/* 
-Igualdade solta 
- 5 == '5' (True)
-
-Igualdade Estrita
-
- 5 = '5' (False)
-
- 0 == false (True)
- 0 === false (false)
-*/ 
 
 console.log(idade > 18 && temCNH); // a idade é maior que 18 E possui cnh? (true)
 console.log(idade > 18 || temCNH); // a idade é maior que 18 OU possui cnh? (true)
 console.log(!temCNH) // negação de possui cnh (false)
 
 // Estrutura de condicional 
+
 let hora = 12;
 
 if(hora < 12){
