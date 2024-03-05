@@ -86,3 +86,17 @@ while (contador < 5){
     console.log(contador);
     contador++;
 }
+
+/* Evento onload: 
+Será executada quando a página for carregada
+(pode ser usada com as tags HTML)
+(não precisa ser usada necessariamente dentro do script)
+*/
+
+/* Função Alert 
+Exibe uma caixa de alerta com uma mensagem de texto
+*/
+
+/* Prompt:
+Exibe uma caixa (pop-up) para obter um valor do usuário
+*/

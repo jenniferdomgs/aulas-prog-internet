@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>iRock - The Virtual Pet Rock (Aula #2)</title>
+</head>
+<body onload="alert('Olá!')">
+    <div style="margin-top:100px; text-align:center">
+      <img id="rockImg" src="rock.png" alt="iRock" onclick="touchRock()"/>
+    </div>
+    <script>
+        function touchRock () {
+            let userName = prompt("Qual seu nome?");
+            if (userName) {
+                alert("Que bom conhecê-lo(a), " + userName + ".");
+
+                document.getElementById("rockImg").src = "rock_happy.png";
+            }
+        }
+    </script>
+</body>
+</html>
