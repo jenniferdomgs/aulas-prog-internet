@@ -21,7 +21,12 @@
             let nome = document.getElementById("Nome").value;
 
             let idade = anoA - AnoNasc;
-            alert(nome + ", você tem " + idade + " anos.");
+            if(idade < 0) {
+                alert('Erro! ' + nome + ", você não existe!");
+            } else{
+                alert(nome + ", você tem " + idade + " anos.");
+            }
+            
         }
     </script>
 </body>
