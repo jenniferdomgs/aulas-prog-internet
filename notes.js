@@ -39,3 +39,5 @@ Igualdade Estrita
 // Prompt: Exibe uma caixa (pop-up) para obter um valor do usuário
 
 // Typeof (nome da variável); // comando para saber o tipo de uma variável
+
+// InnerHTML: pode ser usado para receber o conteúdo de um elemento HTML ou para definir um novo conteúdo para ele

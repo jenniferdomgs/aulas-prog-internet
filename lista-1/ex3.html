@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Adivinhação</title>
+    <link rel="stylesheet" href="ex3.css">
+</head>
+<body>
+    <div>
+        <input type="text" placeholder="Chute um número de 0 a 100" id="chute">
+        <button id="Sorteio" onclick="Sorteio()">Sortear</button>
+    </div>
+
+    <script>
+        function Sorteio () {
+            let numeroS = Math.floor(Math.random() * 101); // biblioteca para sortear número 
+            let chute = document.getElementById('chute').value;
+
+            if(numeroS === chute) { // se o número dado é igual ao número sorteado:
+                alert("Parabéns! Você acertou!");
+            } else if (numeroS > chute){ //  se o número dado for maior que o sorteado:
+                alert("Ops... Boa sorte na próxima! O número é maior");
+            } else{ // se for menor:
+                alert("Tente outra vez! O número é menor");
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,11 +1,54 @@
-body {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-
+* {
+    margin: 0%;
+    box-sizing: border-box;
 }
 
+body {
+    margin: 20px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #5C6D93;
+}
+
+.containerP {
+    height: 300px;
+    width: 500px;
+    margin-top: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    background-color: #F5B407;
+    border-radius: 10px;
+}
+
+.numeros, .operacoes {
+    display: flex;
+    gap: 10px;
+}
 input {
     width: 70px;
     height: 60px;
+    border: white solid 1px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+h3 {
+    color: white;
+}
+
+.numeros input {
+    font-size: 24px;
+}
+
+.operacoes input {
+    font-size: 24px;
+    margin: 10px;
+}
+
+#R {
+    font-size: 32px;
 }

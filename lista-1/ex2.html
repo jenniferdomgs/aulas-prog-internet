@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Idade Check</title>
+    <link rel="stylesheet" href="ex2.css">
+</head>
+<body>
+    <div class="containerP">
+        <input type="text" placeholder="Nome" id="Nome">
+        <input type="text" placeholder="Ano de Nascimento" id="AN">
+        <input type="text" placeholder="Ano Atual" id="AA">
+        <button id="verifica" onclick="verificar()">Check</button>
+    </div>
+
+    <script>
+        function verificar () {
+            let anoA = document.getElementById("AA").value;
+            let AnoNasc = document.getElementById("AN").value;
+            let nome = document.getElementById("Nome").value;
+
+            let idade = anoA - AnoNasc;
+            alert(nome + ", você tem " + idade + " anos.");
+        }
+    </script>
+</body>
+</html>

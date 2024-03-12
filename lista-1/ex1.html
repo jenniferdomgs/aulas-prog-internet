@@ -7,50 +7,60 @@
     <link rel="stylesheet" href="ex1.css">
 </head>
 <body>
+    <div class="containerP">
+
+        <div class="numeros">
+            <input type="text" id="n1" placeholder="0">
+            <input type="text" id="n2" placeholder="0">
+        </div>
+        <div class="operacoes">
+            <input type="button" value="+" onclick="soma()">
+            <input type="button" value="-" onclick="subtracao()">
+            <input type="button" value="C" onclick="limpar()">
+            <input type="button" value="x" onclick="multiplicacao()">
+            <input type="button" value="/" onclick="divisao()">
+            
+        </div>
+        
+        <h3 id="R">RESULTADO</h3>
     
-    <input type="text" value="n1" onclick="">
-    <input type="text"  value="n2" onclick="">
-    <input type="button" value="+" onclick="">
-    <input type="button" value="-" onclick="">
-    <input type="button" value="x" onclick="">
-    <input type="button" value="//" onclick="">
-
-    <input type="button" value="=" onclick="">
-    <p id="R">RESULTADO</p>
-
+    </div>
+    
     <script>
-        function soma () {
-            let n1 = ;
-            let n2 =;
-            let resultado = n1 + n2;
-
-            document.getElementById("R") = resultado;
+        function soma () { 
+            let n1 = document.getElementById("n1").value; 
+            let n2 = document.getElementById("n2").value;
+            let resultado = Number(n1) + Number(n2);
+            document.getElementById("R").innerHTML = resultado; //substitui o valor do h3 com id='R' pelo resultado da soma dos 2 números
         }
 
         function subtracao () {
-            let n1 = ;
-            let n2 ;
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
             let resultado = n1 - n2;
-
-            document.getElementById("R") = resultado;
+            document.getElementById("R").innerHTML = resultado; 
         }
 
         function multiplicacao () {
-            let n1 = ;
-            let n2 = ;
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
             let resultado = n1 * n2;
-
-            document.getElementById("R") = resultado;
+            document.getElementById("R").innerHTML = resultado;
         }
 
         function divisao () {
-            let n1 = ;
-            let n2 = ;
+            let n1 = document.getElementById("n1").value;
+            let n2 = document.getElementById("n2").value;
             let resultado = n1 / n2;
-
-            document.getElementById("R") = resultado;
+            document.getElementById("R").innerHTML = resultado;
         }
-        
+
+        function limpar () {
+            document.getElementById("n1").value = ""; //limpa a caixa do input;
+            document.getElementById("n2").value = "";
+            document.getElementById("R").innerHTML = "RESULTADO";
+        }
+
     </script>
 </body>
 </html>
