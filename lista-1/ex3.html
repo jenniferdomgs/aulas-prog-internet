@@ -13,15 +13,22 @@
     </div>
 
     <script>
-        function Sorteio () {
-            let numeroS = Math.floor(Math.random() * 101); // biblioteca para sortear número 
-            let chute = document.getElementById('chute').value;
+        let numeroS = Math.floor(Math.random() * 101); // p/ sortear o numero
 
-            if(numeroS === chute) { // se o número dado é igual ao número sorteado:
+        function Sorteio() {
+            let chute = parseInt(document.getElementById('chute').value); // aq pega o numero digitado 
+
+            if (isNaN(chute)) { // Verifica se o valor digitado não é um número (sugestão da IA)
+                alert("Por favor, digite um número válido.");
+                return; // Sai da função se o valor não for válido
+            }
+
+            if (numeroS === chute) { // acertou
                 alert("Parabéns! Você acertou!");
-            } else if (numeroS > chute){ //  se o número dado for maior que o sorteado:
+                numeroS = Math.floor(Math.random() * 101); // Atualiza o numero
+            } else if (numeroS > chute) { // se o número for menor que o sorteado
                 alert("Ops... Boa sorte na próxima! O número é maior");
-            } else{ // se for menor:
+            } else { // se o número for maior
                 alert("Tente outra vez! O número é menor");
             }
         }

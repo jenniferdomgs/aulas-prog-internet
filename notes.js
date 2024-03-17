@@ -41,3 +41,7 @@ Igualdade Estrita
 // Typeof (nome da variável); // comando para saber o tipo de uma variável
 
 // InnerHTML: pode ser usado para receber o conteúdo de um elemento HTML ou para definir um novo conteúdo para ele
+
+// parseInt: Serve p/ passar um valor para INT
+
+// isNaN: é uma função que significa "is Not a Number" (não é um número). Ela verifica se o valor passado para ela não é um número.

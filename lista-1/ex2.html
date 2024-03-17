@@ -10,13 +10,12 @@
     <div class="containerP">
         <input type="text" placeholder="Nome" id="Nome">
         <input type="text" placeholder="Ano de Nascimento" id="AN">
-        <input type="text" placeholder="Ano Atual" id="AA">
         <button id="verifica" onclick="verificar()">Check</button>
     </div>
 
     <script>
         function verificar () {
-            let anoA = document.getElementById("AA").value;
+            let anoA = new Date().getFullYear();
             let AnoNasc = document.getElementById("AN").value;
             let nome = document.getElementById("Nome").value;
 
