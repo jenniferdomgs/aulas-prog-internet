@@ -1,29 +1,12 @@
 const frutas = ["Banana", "Maçã", "Uva", "Kiwi", "Laranja", "Limão", "Pera", "Mamão", "Melancia", "Morango", "Abacaxi", "Manga", "Cereja"];
 
+let frutaSorteada = "";
+let letrasUtilizadas = [];
+let tentativas = 0;
+
 function SorteioFrutas () {
-    const indice =  Math.floor(Math.random() * (frutas.length -1));
-    let frutaA = frutas[indice];
+  const indice =  Math.floor(Math.random() * (frutas.length -1)); // o length serve para pegar o tamanho do array
+  let frutaA = frutas[indice];
 }
 
-
-
-function Forca () {
-    let tentativas = "";
-    let letrasOK = [""];
-}
-
-// Vetor de palavras para o jogo da forca
-
-const inputContainer = document.getElementById("palavra");
-
-inputContainer.innerHTML = "";
-
-// Cria um novo input para cada letra da palavra
-for (let i = 0; i < frutaA.length; i++) {
-  const input = document.createElement("input");
-  input.type = "text";
-  input.maxLength = "1";
-  input.disabled = true;
-  inputContainer.appendChild(input);
-}
-
+// Quero que ao clicar o botão "Sortear uma fruta" o usuário tente adivinhar a fruta sorteada e cada letra verificada apareça um novo elemento na tela (condições: se acertar, a letra fica na tela, se errar conta os erros e subtrai nas chances)
