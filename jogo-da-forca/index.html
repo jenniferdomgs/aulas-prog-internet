@@ -5,20 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jogo da Forca</title>
     <link rel="stylesheet" href="style.css">
-    <link src="index.js" defer> <!--O defer serve para dizer ao navegador para executar o script apenas quando a análise do HTML estiver finalizada-->
 </head>
 <body>
     <main>
-        <h1>JOGO DA FORCA</h1>
-        <section id="palavra">
-            <button onclick="SorteioFrutas()">Sortear uma fruta</button>
-        </section>
-        <div id="tentativas"></div>
-        <div id="letrasU"></div>
-        <input type="text" id="inputL" maxlength="1"> <!-- O maxlength serve para limitar o tamanho do input -->
-        <button onclick="verificarL()">Verificar</button>
-        <div id="palavraOculta"></div> 
-        <div id="resultado"></div>
+        <div id="containerInfos">
+            <div id="chances">
+                <p>Você tem 5 tentativas</p>
+            </div>
+            <div id="letrasU">
+                <p>Letras utilizadas: </p>
+            </div>
+        </div>
+        
+        <div id="palavra"></div>
+        <div id="containerInput">
+            <input type="text" id="letra" placeholder="Digite uma Letra">
+            <button id="verificar" onclick="verificar()">Verificar</button>
+        </div>      
     </main>
+    <script src="jogo.js"></script>
 </body>
 </html>

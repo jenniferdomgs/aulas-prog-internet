@@ -44,4 +44,8 @@ Igualdade Estrita
 
 // parseInt: Serve p/ passar um valor para INT
 
-// isNaN: é uma função que significa "is Not a Number" (não é um número). Ela verifica se o valor passado para ela não é um número.
+// isNaN: é uma função que significa "is Not a Number" (não é um número). Ela verifica se o valor passado para ela não é um número
+
+//  Substring: retorna o trecho de uma string de acordo com os números informados por parâmetro
+
+// push coloca algo no fim de uma array
