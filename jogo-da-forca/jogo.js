@@ -1,33 +1,59 @@
-const frutas = ["Banana", "Maçã", "Uva", "Kiwi", "Laranja", "Limão", "Pera", "Mamão", "Melancia", "Morango", "Abacaxi", "Manga", "Cereja"];
+const paises = [
+    "Brasil", "Canadá", "Alemanha", 
+    "França", "Itália", "Japão", "China", "Índia", "Austrália", 
+    "Rússia", "Argentina", "México", "Espanha", "Portugal", 
+    "Holanda", "Suíça", "Suécia", "Noruega", "Finlândia", "Turquia"
+];
 
-const FrutaSorteada = frutas[Math.floor(Math.random() * frutas.length)]; // o lengt serve para pegar o tamanho do array
+const paisSorteado = paises[Math.floor(Math.random() * paises.length)]; // o length serve para pegar o tamanho da lista
 
 const letrasUtilizadas = [];
 let erros = 0;
 
 const palavra = document.getElementById("palavra");
 const letrasU = document.getElementById("letrasU");
-const letra = document.getElementById("letra");
-const verificar = document.getElementById("verificar");
+const letraInput = document.getElementById("letra");
 
-for (let i = 0; i < FrutaSorteada.length; i++) {
-    palavra.innerHTML += "_ "; // coloca traço p/ cada letra da palavra sorteada
-}
+// para ocultar a palavra com os _
+palavra.textContent = "_ ".repeat(paisSorteado.length);
 
-function verificar () { //verifica se tem cada letra dada
-    if (FrutaSorteada.includes(letra.value)) {
-        for (let i = 0; i < FrutaSorteada.length; i++) {
-            if (FrutaSorteada[i] === letra.value) {
-                palavra.innerHTML = palavra.innerHTML.substring(0, i * 2) + letra.value + palavra.innerHTML.substring(i * 2 + 1); // Substring: retorna o trecho de uma string de acordo com os números informados por parâmetro
-            }
+
+function verificar() { // verificando se tem cada letra dada na palavra
+    const letra = letraInput.value.trim().toUpperCase(); // o trim tira os espaços em branco e o toUpperCase deixa as letras maiúsculas
+
+    if (letrasUtilizadas.includes(letra)) { // caso o usuário tentar repetir uma letra
+        alert("Você já tentou essa letra!");
+        return; // para de executar as linhas  abaixo e mostrar um erro
+    }
+
+    letrasUtilizadas.push(letra); // o push add a letra no fim da lista letrasUtilizadas
+    letrasU.textContent = "Letras Utilizadas: " + letrasUtilizadas.join(" "); // só p exibir as letras com espaços
+
+    let acertou = false; // variável de controle
+    
+    // percorrendo a palavra p ver se tem a letra dada e a colocando na sua posição (atualiza a variável a cada acerto)
+    for (let i = 0; i < paisSorteado.length; i++) { 
+        if (paisSorteado[i].toUpperCase() === letra) {
+            acertou = true;
+            const palavraArray = palavra.textContent.split(" ");
+            palavraArray[i] = paisSorteado[i];
+            palavra.textContent = palavraArray.join(" ");
         }
-    } else {
-        letrasUtilizadas.push(letra.value); // push coloca algo no fim de uma array
-        letrasU.innerHTML += letra.value + " ";
+    }
+
+    if (!acertou) {
         erros++;
-        if (erros === 5) {
+        if (erros === 6) {
             alert("Você perdeu!");
+            palavra.textContent = paisSorteado; // exibe a palavra completa
+        }
+    } else { // verifica se acertou todas as letras
+        const palavraAtual = palavra.textContent.replace(/\s/g, ""); // o replace tira os espaços em branco
+        if (palavraAtual.toUpperCase() === paisSorteado.toUpperCase()) {
+            alert("Parabéns! Você ganhou!");
         }
     }
 }
+
+
 

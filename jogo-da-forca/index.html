@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,22 +7,21 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <h1>Jogo da Forca</h1>
     <main>
-        <div id="containerInfos">
-            <div id="chances">
-                <p>Você tem 5 tentativas</p>
-            </div>
-            <div id="letrasU">
-                <p>Letras utilizadas: </p>
+        <div class="box1">
+            <p id="palavra"></p>
+            <div class="boxB">
+                <input type="text" id="letra" maxlength="1" placeholder=" Digite uma Letra"> 
+                <button onclick="verificar()">Verificar</button>
             </div>
         </div>
         
-        <div id="palavra"></div>
-        <div id="containerInput">
-            <input type="text" id="letra" placeholder="Digite uma Letra">
-            <button id="verificar" onclick="verificar()">Verificar</button>
-        </div>      
+        <div class="box2">
+            <p id="letrasU">Letras utilizadas</p>
+        </div>
     </main>
+    
     <script src="jogo.js"></script>
 </body>
 </html>
