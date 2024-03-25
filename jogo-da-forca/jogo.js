@@ -1,6 +1,6 @@
 const paises = [
     "Brasil", "Canada", "Alemanha", 
-    "França", "Italia", "Japao", "China", "Índia", "Australia", 
+    "França", "Italia", "Japao", "China", "India", "Australia", 
     "Russia", "Argentina", "Mexico", "Espanha", "Portugal", 
     "Holanda", "Suiça", "Suecia", "Noruega", "Finlandia", "Turquia"
 ];
@@ -13,10 +13,14 @@ let erros = 0;
 const palavra = document.getElementById("palavra");
 const letrasU = document.getElementById("letrasU");
 const letraInput = document.getElementById("letra");
+const imagemTentativas = document.getElementById("tentativas");
 
 // para ocultar a palavra com os _
 palavra.textContent = "_ ".repeat(paisSorteado.length);
 
+function atualizarImagemTentativas() { // função p/ alterar a imagem de acordo com os erros do usuário (a formatação obedece os nomes das img)
+    imagemTentativas.src = `img/${6 - erros}-tentativas.png`; // 
+}
 
 function verificar() { // verificando se tem cada letra dada na palavra
     const letra = letraInput.value.trim().toUpperCase(); // o trim tira os espaços em branco e o toUpperCase deixa as letras maiúsculas
@@ -47,13 +51,19 @@ function verificar() { // verificando se tem cada letra dada na palavra
             alert("Você perdeu!");
             palavra.textContent = paisSorteado; // exibe a palavra completa
         }
-    } else { // verifica se acertou todas as letras
-        const palavraAtual = palavra.textContent.replace(/\s/g, ""); // o replace tira os espaços em branco
-        if (palavraAtual.toUpperCase() === paisSorteado.toUpperCase()) {
+        atualizarImagemTentativas(); // chamamando a função p/ alterar a img
+    } else {
+        const palavraAtual = palavra.textContent.replace(/\s/g, "");
+        if (palavraAtual.toUpperCase() === paisSorteado.toUpperCase()) { // o replace tira os espaços em branco
             alert("Parabéns! Você ganhou!");
         }
     }
 }
+
+
+atualizarImagemTentativas(); // chamando a função p/ alterar a img quando iniciar
+
+
 
 
 
