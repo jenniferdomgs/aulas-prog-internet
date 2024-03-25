@@ -1,8 +1,8 @@
 const paises = [
-    "Brasil", "Canadá", "Alemanha", 
-    "França", "Itália", "Japão", "China", "Índia", "Austrália", 
-    "Rússia", "Argentina", "México", "Espanha", "Portugal", 
-    "Holanda", "Suíça", "Suécia", "Noruega", "Finlândia", "Turquia"
+    "Brasil", "Canada", "Alemanha", 
+    "França", "Italia", "Japao", "China", "Índia", "Australia", 
+    "Russia", "Argentina", "Mexico", "Espanha", "Portugal", 
+    "Holanda", "Suiça", "Suecia", "Noruega", "Finlandia", "Turquia"
 ];
 
 const paisSorteado = paises[Math.floor(Math.random() * paises.length)]; // o length serve para pegar o tamanho da lista
