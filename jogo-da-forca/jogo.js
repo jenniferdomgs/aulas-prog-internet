@@ -54,7 +54,7 @@ function verificar() { // verificando se tem cada letra dada na palavra
         atualizarImagemTentativas(); // chamamando a função p/ alterar a img
     } else {
         const palavraAtual = palavra.textContent.replace(/\s/g, "");
-        if (palavraAtual.toUpperCase() === paisSorteado.toUpperCase()) { // o replace tira os espaços em branco
+        if (palavraAtual.toUpperCase() === paisSorteado.toUpperCase()) { // O Replace substitui apenas os caracteres escolhidos
             alert("Parabéns! Você ganhou!");
         }
     }

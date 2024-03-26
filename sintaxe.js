@@ -77,3 +77,20 @@ while (contador < 5){
     console.log(contador);
     contador++;
 }
+
+
+let l = ['a', 'b', 'c', 'd'];
+
+l.forEach(function(item, indice) { // o forEach pega o elemento e sua posição na lista
+    console.log(item, indice);
+});
+
+l.pop() // remove o último item da lista
+
+l.push("e") // add um novo item
+
+l.shift() // remove o primeiro item da lista
+
+
+
+

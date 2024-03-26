@@ -49,3 +49,7 @@ Igualdade Estrita
 //  Substring: retorna o trecho de uma string de acordo com os números informados por parâmetro
 
 // push coloca algo no fim de uma array
+
+// Trim vs Replace: O trim remove todos os caracteres de espaço em branco do início e do final da string e o Replace substitui apenas os caracteres designados pela substituição fornecida
+
+// indexof: posição de um item em uma lista
