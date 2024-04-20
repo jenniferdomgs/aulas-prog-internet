@@ -2,8 +2,14 @@ const paises = [
     "Brasil", "Canada", "Alemanha", 
     "França", "Italia", "Japao", "China", "India", "Australia", 
     "Russia", "Argentina", "Mexico", "Espanha", "Portugal", 
-    "Holanda", "Suiça", "Suecia", "Noruega", "Finlandia", "Turquia"
+    "Holanda", "Suiça", "Suecia", "Noruega", "Finlandia", "Turquia", "Grécia", "Países Baixo", "Dinamarca", "Qatar",
+    "Estados Unidos", "Reino Unido", "Irlanda", "Belgica", "Austria", 
+    "Polonia", "Hungria", "Romenia", "Bulgaria", "Eslovaquia", 
+    "Croacia", "Eslovenia", "Islandia", "Lituania", "Letonia", 
+    "Estonia", "Republica Tcheca", "Israel", "Africa do Sul", "Egito", 
+    "Ira", "Arabia Saudita", "Emirados Arabes Unidos", "Nova Zelandia", "Coreia do Sul"
 ];
+
 
 const paisSorteado = paises[Math.floor(Math.random() * paises.length)]; // o length serve para pegar o tamanho da lista
 
