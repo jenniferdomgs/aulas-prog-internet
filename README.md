@@ -1,2 +1,3 @@
-# aulas-prog-internet
-• Práticas de Programação para Internet - IFRN, 2024.
+> Práticas & Exercícios
+## aulas-prog-internet
+
